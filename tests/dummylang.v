@@ -72,7 +72,7 @@ Hint Constructors is_val st exp step estep steps unop binop.
     Ltac. *)
 Lemma always_sc : forall p, steps p ;;.
 Proof.
-  induction 0; eauto.
+  induction p; eauto.
   induction e; eauto.
   - eapply stepsn; repeat (assumption || econstructor || discriminate).
   - case b; induction e1; eauto.
